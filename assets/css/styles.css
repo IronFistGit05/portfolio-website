@@ -87,3 +87,46 @@ ul {
   top: 2rem;
   background-color: var(--first-color);
 }
+
+/*Home Section CSS*/
+
+.home{
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.home_data{
+    font-size: 1.5rem;
+}
+
+.home_data button{
+    width: 9rem;
+    height: 2.8rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: var(--first-color);
+    border: none;
+    border-radius: 7px;
+}
+.home_data svg{
+    height: 2rem;
+    padding-top: 2.5rem;
+    padding-right: 1.5rem;
+    fill: black;
+    transition: 0.3s;
+}
+
+.home_data svg:hover {
+  fill: var(--first-color);
+}
+
+.name-highlight{
+    color: var(--first-color);
+}
+
+#profile-img img{
+    height: 30rem;
+    border-radius: 100%;
+}
