@@ -10,34 +10,38 @@
 
 <body>
     <!--===== NAVBAR =====-->
-    <nav class="nav">
-        <div class="header">
-            <a href="#">Kapil</a>
-        </div>
-        <div class="nav-items">
-            <ul class="nav-list">
-                <li><a href="#home" class="active-link">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="nav_toggle" id="nav-toggle">
-            <i class='bx bx-menu'></i>
-        </div>
-    </nav>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div class="header">
+                <a href="#">Kapil</a>
+            </div>
+            <div class="nav-items">
+                <ul class="nav-list">
+                    <li><a href="#home" class="active-link">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav_toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
     <!--===== HOME =====-->
-    <section class="home">
+    <section class="home bd-grid">
         <div class="home_data">
             <h1>Hi,<br> I'm <span class="name-highlight">Kapil</span><br> Web Developer</h1>
             <button>Contact</button><br>
 
             <!-- SVG for LinkedIn and GitHub Icons-->
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 512 512" xml:space="preserve">
                 <g id="7935ec95c421cee6d86eb22ecd125aef">
-                    <path style="display: inline; fill-rule: evenodd; clip-rule: evenodd;" d="M116.504,500.219V170.654H6.975v329.564H116.504
+                    <path style="display: inline; fill-rule: evenodd; clip-rule: evenodd;"
+                        d="M116.504,500.219V170.654H6.975v329.564H116.504
                     		L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941
                     		C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219
                     		c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533
@@ -59,15 +63,35 @@
                         </g>
                     </g>
                 </g>
-            </svg>            
+            </svg>
         </div>
         <!-- Profile Image-->
-             <div class="profile-img">
-                <img src="./assets/img/my-profile-image-animated.png" alt="kapil-profile-image">
-             </div>
-             
+        <div class="profile-img">
+            <img src="./assets/img/my-profile-image-animated_without_bg.png" alt="kapil-profile-image">
+        </div>
+
     </section>
+
     <!--===== ABOUT =====-->
+    <section class="about bd-grid">
+        <div class="about_items">
+            <div>
+                <h2 class="about_title">About</h2>
+            </div>
+            <div class="about_data">
+                <div class="about_img">
+                    <img src="./assets/img/my-profile-image-animated.png" alt="">
+                </div>
+                <div class="about_text">
+                    <h3>I'm Kapil</h3>
+                    <p>Creative and motivated student passionate about Web Development, Data Visualization, and Graphic
+                        Design. Eager to
+                        apply technical and design skills to create responsive, visually engaging, and user-friendly digital
+                        experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--===== SKILLS =====-->
     <!--===== CONTACT =====-->
     <!--===== FOOTER =====-->
