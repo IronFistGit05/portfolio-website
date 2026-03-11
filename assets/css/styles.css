@@ -34,21 +34,61 @@ h1 {
     font-size: 3.5rem;
 }
 
-/*===== LAYOUT =====*/
-.bd-grid {
-  max-width: 1024px;
-  display: grid;
-  margin-left: 20rem;
-  margin-right: 20rem;
+.section_title {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--first-color);
+    text-align: center;
 }
+
+/*BUTTON*/
+.primary_button {
+    width: 9rem;
+    height: 2.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--first-color);
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary_button:hover {
+    box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+}
+
+/*Undeline below the About Title*/
+.section_title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background-color: var(--first-color);
+    border-radius: 2px;
+}
+
+/* LAYOUT */
+.bd-grid {
+    max-width: 1024px;
+    width: 90%;
+    display: grid;
+    margin: 0 auto;
+}
+
 .l-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  background-color: #fff;
-  box-shadow: var(--bottom-shadow);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: #fff;
+    box-shadow: var(--bottom-shadow);
 }
 
 /*Navbar CSS*/
@@ -56,13 +96,14 @@ h1 {
 .header a {
     color: var(--second-color);
 }
-.navbar{
+
+.navbar {
     width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: #fff;
     box-shadow: var(--bottom-shadow);
 }
 
@@ -72,6 +113,16 @@ h1 {
     justify-content: space-between;
     align-items: center;
     font-weight: 600;
+}
+
+.nav-items {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
 }
 
 .nav-list {
@@ -121,6 +172,13 @@ h1 {
 
 .nav_toggle {
     display: none;
+    color: var(--second-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.show-menu {
+    display: block !important;
 }
 
 /*Home Section CSS*/
@@ -136,23 +194,6 @@ h1 {
 
 .home_data {
     font-size: 1.5rem;
-}
-
-.home_data button {
-    width: 9rem;
-    height: 2.8rem;
-    font-weight: 600;
-    font-size: 1rem;
-    color: white;
-    background-color: var(--first-color);
-    border-radius: 7px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.home_data button:hover {
-    box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
 
 .home_data svg {
@@ -188,34 +229,14 @@ h1 {
     row-gap: 2rem;
 }
 
-.about_items{
+.about_items {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.about_title {
-    position: relative;
-    display: inline-block;
-    font-size: 2rem;
-    color: var(--first-color);
-    text-align: center;
-}
 
-/*Undeline below the About Title*/
-.about_title::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -6px;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 2px;
-    background-color: var(--first-color);
-    border-radius: 2px;
-}
-
-.about_img img{
+.about_img img {
     height: 25rem;
     border-radius: 5%;
 }
@@ -229,6 +250,173 @@ h1 {
     gap: 7rem;
 }
 
-.about_text h3{
+.about_text h3 {
     font-size: 1.5rem;
+}
+
+/*Skills Section CSS*/
+.skills {
+    padding: 6rem 0 5rem;
+}
+
+.skills_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.skills_data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.skill_card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill_card i {
+    font-size: 2rem;
+    color: var(--first-color);
+    margin-bottom: 0.5rem;
+}
+
+.skill_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.skill_card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/*Projects Section CSS*/
+
+.projects {
+    row-gap: 2rem;
+}
+
+.projects_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.projects_data {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.projects_card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.projects_card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/*Contact Section CSS*/
+
+.contact {
+    padding: 4rem 0 5rem;
+}
+
+.contact_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Footer CSS*/
+.footer {
+    background-color: var(--second-color);
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    padding: 2rem 0;
+}
+
+.footer__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer__social {
+    margin-bottom: 2rem;
+}
+
+.footer__icon {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 1rem;
+}
+
+.footer__copy {
+    font-size: 1rem;
+}
+
+/* Mobile CSS*/
+@media (max-width:480px) {
+
+
+    .nav {
+        height: 3rem;
+        font-weight: 600;
+    }
+
+    .nav-items {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        width: 200px;
+        background: white;
+        padding: 1.5rem;
+        display: none;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nav_toggle {
+        display: block;
+    }
+
+    /*Home Section*/
+    .home {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 5rem;
+        padding: 4rem 0 5rem;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
 }
